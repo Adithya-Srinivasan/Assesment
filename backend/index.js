@@ -11,7 +11,8 @@ const db = mysql.createConnection({
   port: 3306,
   host: "localhost",
   password: "WearWolfLaBete@002",
-  database: "loginsystem",
+  database: "users",
+  // nestTables: "usersdata",
 });
 
 app.use(
@@ -23,12 +24,12 @@ app.use(
 );
 
 app.post("/register", (req, res) => {
-  const username = req.body.username;
+  const name = req.body.name;
   const number = req.body.number;
   const email = req.body.email;
-  db.execute(
-    "INSERT INTO users (username, number, email) VALUES (?,?)",
-    [username, number, email],
+  db.query(
+    "INSERT INTO users (name, number, email) VALUES (?,?,?)",
+    [name, number, email],
     (err, result) => {
       console.log(err);
     }
@@ -40,7 +41,6 @@ app.listen(3001, () => {
   console.log("running server");
 });
 
-// setup route middlewares
 var csrfProtection = csrf({ cookie: true });
 var parseForm = bodyParser.urlencoded({ extended: false });
 
@@ -51,13 +51,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// parse cookies
-// we need this because "cookie" is true in csrfProtection
 app.use(cookieParser());
 
-app.get("/form", csrfProtection, function (req, res) {
-  // pass the csrfToken to the view
-  // res.render('send', { csrfToken: req.csrfToken() })
+app.get("/register", csrfProtection, function (req, res) {
   res.send({ csrfToken: req.csrfToken() });
 });
 

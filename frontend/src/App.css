@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  background: rgb(29, 108, 163);
+  background: linear-gradient(
+    0deg,
+    rgba(29, 108, 163, 1) 35%,
+    rgba(26, 203, 209, 1) 100%
+  );
+  width: 30vw;
+  margin-left: 35vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border-radius: 10px;
 }
 
 .registration {
@@ -7,15 +18,114 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.logo {
+  height: 5vh;
+  width: 10vw;
+  margin-top: 5vh;
+  margin-left: -14vw;
 }
-input {
-  width: 250px;
-  height: 40px;
+
+.header {
+  text-align: justify;
+  width: 80%;
+}
+
+.header-text {
+  text-align: justify;
+  width: 80%;
+  margin-bottom: 5vh;
+}
+
+.field-text {
+  margin-left: -18vw;
+}
+
+.input-field {
+  height: 5vh;
+  width: 24vw;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.field-num {
+  display: flex;
+}
+
+.num-field {
+  height: 4.3vh;
+  width: 15vw;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: -12.5vw;
+  margin-bottom: 2vw;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none;
+  background-color: transparent;
+  margin-left: -4vw;
+}
+
+.react-tel-input .flag-dropdown.open {
+  background-color: transparent;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background-color: transparent;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent;
+}
+
+.react-tel-input .country-list {
+  height: 20vh;
+  width: 24vw;
+}
+
+.react-tel-input .country-list .country {
+  text-align: left;
+  color: black;
+}
+
+.react-tel-input .selected-flag {
+  margin-left: 7vw;
+}
+
+.react-tel-input .form-control {
+  border: 1px black solid;
+  height: 5vh;
+  width: 8vw;
+  margin-left: -10.5vw;
+}
+
+.captcha {
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+}
+
+.text-error {
+  color: red;
+}
+
+.check-main {
+  display: flex;
+  margin-left: 2vw;
+}
+
+.check-text {
+  text-align: justify;
+  width: 80%;
+  margin-top: 2.5vh;
+}
+
+.reg-btn {
+  height: 5vh;
+  width: 8vw;
+  margin: 20px;
+  border-radius: 10px;
 }

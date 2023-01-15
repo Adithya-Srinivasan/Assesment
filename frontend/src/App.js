@@ -33,7 +33,7 @@ export default function App() {
   const [ResponseState] = useState("not yet");
 
   async function getCallToForm() {
-    const url = "/form";
+    const url = "/register";
     let fetchGetResponse = await fetch(`${domainUrl}${url}`, {
       method: "GET",
       headers: {

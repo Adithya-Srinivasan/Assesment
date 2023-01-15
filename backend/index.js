@@ -25,11 +25,13 @@ app.use(
 
 app.post("/register", (req, res) => {
   const name = req.body.name;
+  const company = req.body.compamy;
   const number = req.body.number;
+  const jobtitle = req.boby.jobtitle;
   const email = req.body.email;
   db.query(
-    "INSERT INTO users (name, number, email) VALUES (?,?,?)",
-    [name, number, email],
+    "INSERT INTO users (name,company, number,jobtitle, email) VALUES (?,?,?,?,?)",
+    [name, company, number, jobtitle, email],
     (err, result) => {
       console.log(err);
     }

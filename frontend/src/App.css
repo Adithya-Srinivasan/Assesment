@@ -130,6 +130,41 @@
   border-radius: 10px;
 }
 
+@media only screen and (min-width: 1537px) and (max-width: 2560px) {
+  .header {
+    font-size: 60px;
+  }
+  .header-text {
+    font-size: 40px;
+  }
+  .field-text {
+    font-size: 40px;
+  }
+  .input-field {
+    font-size: 40px;
+  }
+  .num-field {
+    font-size: 40px;
+  }
+  .field-num {
+    margin-left: 0.5vw;
+  }
+  .react-tel-input .form-control {
+    font-size: 40px;
+  }
+  .check-main {
+    width: 90%;
+    margin-left: 1.5vw;
+  }
+  .check-text {
+    width: 100%;
+    font-size: 40px;
+  }
+  .reg-btn {
+    font-size: 40px;
+  }
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1536px) {
   .App {
     text-align: center;
